@@ -1,0 +1,18 @@
+{
+  "name": "genial-blocks",
+  "version": "0.1.0",
+  "description": "Native Gutenberg blocks from GenialSouls.",
+  "private": true,
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build src/blocks/advanced-heading/index.js --output-path=build/blocks/advanced-heading && node scripts/flatten-block-metadata.js advanced-heading && wp-scripts build src/blocks/advanced-button/index.js --output-path=build/blocks/advanced-button && node scripts/flatten-block-metadata.js advanced-button",
+    "start": "wp-scripts start src/blocks/advanced-heading/index.js --output-path=build/blocks/advanced-heading",
+    "lint:js": "wp-scripts lint-js src",
+    "lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
+    "format:check": "wp-scripts format --check src"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "27.9.0",
+    "typescript": "5.7.3"
+  }
+}
