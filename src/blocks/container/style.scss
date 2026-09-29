@@ -2,7 +2,10 @@
 	--genial-container-content-width: var(--wp--style--global--content-size, 800px);
 	--genial-container-wide-width: var(--wp--style--global--wide-size, 1200px);
 	display: flex;
-	flex-direction: var(--genial-container-direction-desktop, column);
+	// Legacy saved blocks store semantic values (vertical/horizontal). CSS
+	// flex-direction requires column/row, so default invalid legacy values to
+	// a readable vertical layout and preserve explicit horizontal choices.
+	flex-direction: column;
 	justify-content: var(--genial-container-justify-desktop, flex-start);
 	align-items: var(--genial-container-align-desktop, stretch);
 	gap: var(--genial-container-gap-desktop, 24px);
@@ -10,26 +13,62 @@
 	margin-inline: auto;
 	box-sizing: border-box;
 	width: 100%;
+
+	&[style*="--genial-container-direction-desktop:horizontal"] {
+		flex-direction: row;
+	}
 }
 
 @media (max-width: 1024px) {
 
 	.wp-block-genial-blocks-container {
-		flex-direction: var(--genial-container-direction-tablet, var(--genial-container-direction-desktop, column));
+		flex-direction: column;
 		justify-content: var(--genial-container-justify-tablet, var(--genial-container-justify-desktop, flex-start));
 		align-items: var(--genial-container-align-tablet, var(--genial-container-align-desktop, stretch));
 		gap: var(--genial-container-gap-tablet, var(--genial-container-gap-desktop, 24px));
 		max-width: var(--genial-container-max-width-tablet, var(--genial-container-max-width-desktop, var(--genial-container-content-width)));
+
+		&[style*="--genial-container-direction-desktop:horizontal"] {
+			flex-direction: row;
+		}
+
+		&[style*="--genial-container-direction-tablet:horizontal"] {
+			flex-direction: row;
+		}
+
+		&[style*="--genial-container-direction-tablet:vertical"] {
+			flex-direction: column;
+		}
 	}
 }
 
 @media (max-width: 767px) {
 
 	.wp-block-genial-blocks-container {
-		flex-direction: var(--genial-container-direction-mobile, var(--genial-container-direction-tablet, var(--genial-container-direction-desktop, column)));
+		flex-direction: column;
 		justify-content: var(--genial-container-justify-mobile, var(--genial-container-justify-tablet, var(--genial-container-justify-desktop, flex-start)));
 		align-items: var(--genial-container-align-mobile, var(--genial-container-align-tablet, var(--genial-container-align-desktop, stretch)));
 		gap: var(--genial-container-gap-mobile, var(--genial-container-gap-tablet, var(--genial-container-gap-desktop, 24px)));
 		max-width: var(--genial-container-max-width-mobile, var(--genial-container-max-width-tablet, var(--genial-container-max-width-desktop, var(--genial-container-content-width))));
+
+		&[style*="--genial-container-direction-desktop:horizontal"] {
+			flex-direction: row;
+		}
+
+		&[style*="--genial-container-direction-tablet:horizontal"] {
+			flex-direction: row;
+		}
+
+		&[style*="--genial-container-direction-tablet:vertical"] {
+			flex-direction: column;
+		}
+
+		&[style*="--genial-container-direction-mobile:horizontal"] {
+			flex-direction: row;
+		}
+
+		&[style*="--genial-container-direction-mobile:vertical"] {
+			flex-direction: column;
+		}
 	}
 }
