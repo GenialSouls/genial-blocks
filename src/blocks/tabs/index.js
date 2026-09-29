@@ -6,4 +6,9 @@ import { blockIcons } from '../../shared/block-icons';
 import './style.scss';
 import './editor.scss';
 
-registerBlockType( metadata.name, { ...metadata, icon: blockIcons.tabs, edit: Edit, save } );
+registerBlockType( metadata.name, {
+	...metadata,
+	icon: blockIcons.tabs,
+	edit: Edit,
+	save,
+} );
