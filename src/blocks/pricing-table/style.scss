@@ -1,0 +1,64 @@
+.wp-block-genial-blocks-pricing-table {
+	--genial-pricing-text: inherit;
+	--genial-pricing-price: inherit;
+	--genial-pricing-accent: currentcolor;
+	--genial-pricing-bg: transparent;
+	--genial-pricing-border: currentcolor;
+	--genial-pricing-radius: 8px;
+	--genial-pricing-padding: 24px;
+	position: relative;
+	padding: var(--genial-pricing-padding);
+	border: 1px solid var(--genial-pricing-border);
+	border-radius: var(--genial-pricing-radius);
+	background: var(--genial-pricing-bg);
+	color: var(--genial-pricing-text);
+	text-align: var(--genial-pricing-align-desktop, var(--genial-pricing-align, center));
+
+	@media (max-width: 1024px) {
+		text-align: var(--genial-pricing-align-tablet, var(--genial-pricing-align-desktop, var(--genial-pricing-align, center)));
+	}
+
+	@media (max-width: 767px) {
+		text-align: var(--genial-pricing-align-mobile, var(--genial-pricing-align-tablet, var(--genial-pricing-align-desktop, var(--genial-pricing-align, center))));
+	}
+}
+
+.genial-blocks-pricing__badge {
+	color: var(--genial-pricing-accent);
+	font-weight: 700;
+}
+
+.genial-blocks-pricing__price {
+	align-items: baseline;
+	color: var(--genial-pricing-price);
+	display: flex;
+	gap: 6px;
+	justify-content: var(--genial-pricing-align);
+}
+
+.genial-blocks-pricing__price strong {
+	font-size: 2.5em;
+}
+
+.genial-blocks-pricing__price del {
+	opacity: 0.7;
+}
+
+.wp-block-genial-blocks-pricing-table ul {
+	margin: 1.5em 0;
+	padding-left: 1.2em;
+	text-align: left;
+}
+
+.genial-blocks-pricing__cta {
+	background: var(--genial-pricing-accent);
+	color: #fff;
+	display: inline-block;
+	padding: 10px 18px;
+	text-decoration: none;
+}
+
+.genial-blocks-pricing__cta:focus-visible {
+	outline: 2px solid currentcolor;
+	outline-offset: 3px;
+}

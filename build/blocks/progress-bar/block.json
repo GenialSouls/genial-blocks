@@ -1,0 +1,42 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/progress-bar",
+	"version": "0.2.0",
+	"title": "Progress Bar",
+	"category": "genial-blocks",
+	"icon": "chart-area",
+	"description": "An accessible progress or completion indicator.",
+	"keywords": [ "progress", "bar", "percent", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"label": { "type": "string", "default": "Progress" },
+		"value": { "type": "number", "default": 65 },
+		"minimum": { "type": "number", "default": 0 },
+		"maximum": { "type": "number", "default": 100 },
+		"displayValue": { "type": "string", "default": "" },
+		"suffix": { "type": "string", "default": "%" },
+		"barColor": { "type": "string", "default": "" },
+		"trackColor": { "type": "string", "default": "" },
+		"labelColor": { "type": "string", "default": "" },
+		"height": { "type": "number", "default": 12 },
+		"radius": { "type": "number", "default": 999 },
+		"spacing": { "type": "number", "default": 8 },
+		"duration": { "type": "number", "default": 800 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}

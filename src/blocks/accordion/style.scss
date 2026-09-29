@@ -1,0 +1,60 @@
+.wp-block-genial-blocks-accordion {
+	color: var(--genial-blocks-accordion-content-color, inherit);
+
+	.genial-blocks-accordion__item {
+		background: var(--genial-blocks-accordion-background, transparent);
+		border-color: var(--genial-blocks-accordion-border-color, currentColor);
+		border-radius: var(--genial-blocks-accordion-radius, 6px);
+		border-style: var(--genial-blocks-accordion-border-style, solid);
+		border-width: var(--genial-blocks-accordion-border-width, 1px);
+		margin-bottom: var(--genial-blocks-accordion-item-spacing, 8px);
+		overflow: hidden;
+
+		&.is-open {
+			background: var(--genial-blocks-accordion-open-background, var(--genial-blocks-accordion-background, transparent));
+		}
+	}
+
+	.genial-blocks-accordion__heading {
+		color: var(--genial-blocks-accordion-title-color, inherit);
+		margin: 0;
+	}
+
+	.genial-blocks-accordion__heading button {
+		appearance: none;
+		background: transparent;
+		border: 0;
+		color: inherit;
+		cursor: pointer;
+		display: flex;
+		font: inherit;
+		justify-content: space-between;
+		padding: var(--genial-blocks-accordion-content-padding, 16px);
+		text-align: left;
+		width: 100%;
+
+		&::after {
+			color: var(--genial-blocks-accordion-indicator-color, currentColor);
+			content: "+";
+			font-size: 1.25em;
+			line-height: 1;
+		}
+
+		&:focus-visible {
+			outline: 2px solid currentcolor;
+			outline-offset: -4px;
+		}
+	}
+
+	.genial-blocks-accordion__item.is-open .genial-blocks-accordion__heading button::after {
+		content: "−";
+	}
+
+	.genial-blocks-accordion__panel {
+		padding: 0 var(--genial-blocks-accordion-content-padding, 16px) var(--genial-blocks-accordion-content-padding, 16px);
+	}
+
+	.genial-blocks-accordion__panel > * {
+		margin: 0;
+	}
+}

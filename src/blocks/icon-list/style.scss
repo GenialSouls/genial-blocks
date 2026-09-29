@@ -1,0 +1,53 @@
+.wp-block-genial-blocks-icon-list {
+	color: var(--genial-blocks-icon-list-text-color, inherit);
+
+	&.has-icon-list-align-left {
+		text-align: left;
+	}
+
+	&.has-icon-list-align-center {
+		text-align: center;
+	}
+
+	&.has-icon-list-align-right {
+		text-align: right;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		align-items: center;
+		display: flex;
+		gap: var(--genial-blocks-icon-list-icon-gap, 10px);
+		margin-bottom: var(--genial-blocks-icon-list-item-spacing, 12px);
+	}
+
+	li:last-child {
+		margin-bottom: 0;
+	}
+
+	.genial-blocks-icon-list__icon {
+		color: var(--genial-blocks-icon-list-icon-color, currentColor);
+		flex: 0 0 var(--genial-blocks-icon-list-icon-size, 24px);
+		line-height: 0;
+	}
+
+	.genial-blocks-icon-list__icon svg {
+		display: block;
+		height: var(--genial-blocks-icon-list-icon-size, 24px);
+		width: var(--genial-blocks-icon-list-icon-size, 24px);
+	}
+
+	a {
+		color: inherit;
+
+		&:focus-visible {
+			outline: 2px solid currentcolor;
+			outline-offset: 3px;
+		}
+	}
+}

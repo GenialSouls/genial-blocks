@@ -1,35 +1,61 @@
 {
-  "apiVersion": 3,
-  "name": "genial-blocks/advanced-button",
-  "version": "0.1.0",
-  "title": "Advanced Button",
-  "category": "design",
-  "description": "A flexible, accessible link button.",
-  "keywords": ["button", "link", "call to action"],
-  "textdomain": "genial-blocks",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "attributes": {
-    "text": { "type": "string", "source": "html", "selector": "a", "default": "Button text" },
-    "url": { "type": "string", "default": "#" },
-    "opensInNewTab": { "type": "boolean", "default": false },
-    "width": { "type": "string", "enum": ["auto", "full"], "default": "auto" },
-    "textColor": { "type": "string", "default": "" },
-    "backgroundColor": { "type": "string", "default": "" },
-    "hoverTextColor": { "type": "string", "default": "" },
-    "hoverBackgroundColor": { "type": "string", "default": "" },
-    "borderColor": { "type": "string", "default": "" },
-    "borderStyle": { "type": "string", "enum": ["none", "solid", "dashed", "dotted"], "default": "solid" },
-    "borderWidth": { "type": "number", "default": 1 },
-    "borderRadius": { "type": "number", "default": 4 },
-    "paddingVertical": { "type": "number", "default": 12 },
-    "paddingHorizontal": { "type": "number", "default": 20 }
-  },
-  "supports": {
-    "align": ["left", "center", "right", "wide", "full"],
-    "anchor": true,
-    "spacing": { "margin": true, "padding": true },
-    "typography": { "fontSize": true, "lineHeight": true, "__experimentalFontFamily": true, "__experimentalFontWeight": true, "__experimentalLetterSpacing": true, "__experimentalTextTransform": true, "__experimentalTextDecoration": true }
-  }
+	"apiVersion": 3,
+	"name": "genial-blocks/advanced-button",
+	"version": "0.2.0",
+	"title": "Advanced Button",
+	"category": "genial-blocks",
+	"icon": "button",
+	"description": "A flexible, accessible link button.",
+	"keywords": [ "button", "link", "call to action", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "a",
+			"default": "Button text"
+		},
+		"url": { "type": "string", "default": "#" },
+		"opensInNewTab": { "type": "boolean", "default": false },
+		"width": {
+			"type": "string",
+			"enum": [ "auto", "full" ],
+			"default": "auto"
+		},
+		"responsive": {
+			"type": "object",
+			"default": { "desktop": {}, "tablet": {}, "mobile": {} }
+		},
+		"textColor": { "type": "string", "default": "" },
+		"backgroundColor": { "type": "string", "default": "" },
+		"hoverTextColor": { "type": "string", "default": "" },
+		"hoverBackgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderStyle": {
+			"type": "string",
+			"enum": [ "none", "solid", "dashed", "dotted" ],
+			"default": "solid"
+		},
+		"borderWidth": { "type": "number", "default": 1 },
+		"borderRadius": { "type": "number", "default": 4 },
+		"paddingVertical": { "type": "number", "default": 12 },
+		"paddingHorizontal": { "type": "number", "default": 20 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
+		}
+	}
 }

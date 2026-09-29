@@ -1,0 +1,55 @@
+.wp-block-genial-blocks-tabs {
+	--genial-tabs-active: inherit;
+	--genial-tabs-inactive: inherit;
+	--genial-tabs-active-bg: transparent;
+	--genial-tabs-inactive-bg: transparent;
+	--genial-tabs-content: inherit;
+	--genial-tabs-content-bg: transparent;
+	--genial-tabs-border: currentcolor;
+	--genial-tabs-radius: 4px;
+	--genial-tabs-gap: 4px;
+	--genial-tabs-tab-padding: 12px;
+	--genial-tabs-content-padding: 20px;
+	color: var(--genial-tabs-content);
+}
+
+.genial-blocks-tabs__tablist {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--genial-tabs-gap);
+	border-bottom: 1px solid var(--genial-tabs-border);
+}
+
+.genial-blocks-tabs__tablist [role="tab"] {
+	border: 1px solid transparent;
+	border-radius: var(--genial-tabs-radius) var(--genial-tabs-radius) 0 0;
+	background: var(--genial-tabs-inactive-bg);
+	color: var(--genial-tabs-inactive);
+	cursor: pointer;
+	padding: var(--genial-tabs-tab-padding);
+}
+
+.genial-blocks-tabs__tablist [role="tab"].is-active,
+.genial-blocks-tabs__tablist [role="tab"][aria-selected="true"] {
+	background: var(--genial-tabs-active-bg);
+	color: var(--genial-tabs-active);
+	border-color: var(--genial-tabs-border);
+	border-bottom-color: var(--genial-tabs-active-bg);
+}
+
+.genial-blocks-tabs__tablist [role="tab"]:focus-visible {
+	outline: 2px solid currentcolor;
+	outline-offset: 2px;
+}
+
+.genial-blocks-tabs__panel {
+	background: var(--genial-tabs-content-bg);
+	border: 1px solid var(--genial-tabs-border);
+	border-top: 0;
+	border-radius: 0 0 var(--genial-tabs-radius) var(--genial-tabs-radius);
+	padding: var(--genial-tabs-content-padding);
+}
+
+.genial-blocks-tabs__panel[hidden] {
+	display: none;
+}

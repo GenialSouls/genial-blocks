@@ -1,0 +1,51 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/icon-list",
+	"version": "0.2.0",
+	"title": "Icon List",
+	"category": "genial-blocks",
+	"icon": "list-view",
+	"description": "A repeatable list with curated local icons and optional links.",
+	"keywords": [ "list", "icon", "features", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": "item-1",
+					"icon": "check",
+					"text": "List item",
+					"url": "",
+					"opensInNewTab": false
+				}
+			]
+		},
+		"iconSize": { "type": "number", "default": 24 },
+		"iconColor": { "type": "string", "default": "" },
+		"textColor": { "type": "string", "default": "" },
+		"itemSpacing": { "type": "number", "default": 12 },
+		"iconGap": { "type": "number", "default": 10 },
+		"alignment": {
+			"type": "string",
+			"enum": [ "left", "center", "right" ],
+			"default": "left"
+		}
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextDecoration": true
+		}
+	}
+}

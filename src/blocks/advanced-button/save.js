@@ -1,4 +1,13 @@
 import { RichText, useBlockProps } from '@wordpress/block-editor';
+import { getSafeRel } from '../../shared/link';
+import { getResponsiveStyles } from '../../shared/responsive';
+
+const responsiveDefinitions = {
+	width: {
+		name: 'width',
+		transform: ( value ) => ( value === 'full' ? '100%' : 'auto' ),
+	},
+};
 
 function getButtonStyle( attributes ) {
 	return {
@@ -39,8 +48,15 @@ function getButtonStyle( attributes ) {
 export default function save( { attributes } ) {
 	const blockProps = useBlockProps.save( {
 		className: `has-button-width-${ attributes.width || 'auto' }`,
+		style: getResponsiveStyles(
+			attributes.responsive,
+			responsiveDefinitions,
+			{
+				prefix: 'genial-button',
+			}
+		),
 	} );
-	const rel = attributes.opensInNewTab ? 'noopener noreferrer' : undefined;
+	const rel = getSafeRel( attributes.opensInNewTab );
 
 	return (
 		<div { ...blockProps }>

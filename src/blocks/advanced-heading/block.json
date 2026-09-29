@@ -1,29 +1,57 @@
 {
-  "apiVersion": 3,
-  "name": "genial-blocks/advanced-heading",
-  "version": "0.1.0",
-  "title": "Advanced Heading",
-  "category": "text",
-  "description": "A semantic heading with an optional subtitle.",
-  "keywords": ["heading", "title", "subtitle"],
-  "textdomain": "genial-blocks",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "attributes": {
-    "content": { "type": "string", "source": "html", "selector": "h2", "default": "" },
-    "headingLevel": { "type": "string", "enum": ["h1", "h2", "h3", "h4", "h5", "h6"], "default": "h2" },
-    "subtitle": { "type": "string", "source": "html", "selector": ".genial-blocks-advanced-heading__subtitle", "default": "" },
-    "subtitleEnabled": { "type": "boolean", "default": false },
-    "subtitleFontSize": { "type": "string", "enum": ["", "small", "medium", "large"], "default": "" },
-    "subtitleTextColor": { "type": "string", "default": "" },
-    "subtitleMarginTop": { "type": "number", "default": 8 }
-  },
-  "supports": {
-    "align": ["left", "center", "right"],
-    "anchor": true,
-    "color": { "text": true, "background": false, "gradients": false },
-    "spacing": { "margin": true, "padding": true },
-    "typography": { "fontSize": true, "lineHeight": true, "textAlign": true, "__experimentalFontFamily": true, "__experimentalFontWeight": true, "__experimentalLetterSpacing": true, "__experimentalTextTransform": true, "__experimentalTextDecoration": true }
-  }
+	"apiVersion": 3,
+	"name": "genial-blocks/advanced-heading",
+	"version": "0.2.0",
+	"title": "Advanced Heading",
+	"category": "genial-blocks",
+	"icon": "heading",
+	"description": "A semantic heading with an optional subtitle.",
+	"keywords": [ "heading", "title", "subtitle", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2",
+			"default": ""
+		},
+		"headingLevel": {
+			"type": "string",
+			"enum": [ "h1", "h2", "h3", "h4", "h5", "h6" ],
+			"default": "h2"
+		},
+		"subtitle": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-advanced-heading__subtitle",
+			"default": ""
+		},
+		"subtitleEnabled": { "type": "boolean", "default": false },
+		"subtitleFontSize": {
+			"type": "string",
+			"enum": [ "", "small", "medium", "large" ],
+			"default": ""
+		},
+		"subtitleTextColor": { "type": "string", "default": "" },
+		"subtitleMarginTop": { "type": "number", "default": 8 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right" ],
+		"anchor": true,
+		"color": { "text": true, "background": false, "gradients": false },
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"textAlign": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
+		}
+	}
 }

@@ -11,6 +11,7 @@
 		padding: var(--genial-blocks-button-padding-vertical, 12px) var(--genial-blocks-button-padding-horizontal, 20px);
 		text-decoration: none;
 		transition: background-color 0.2s ease, color 0.2s ease;
+		width: var(--genial-button-width-desktop, auto);
 
 		&:hover {
 			background-color: var(--genial-blocks-button-hover-background-color, var(--genial-blocks-button-background-color, transparent));
@@ -23,9 +24,26 @@
 		}
 	}
 
-	&.has-button-width-full .genial-blocks-advanced-button__link {
-		box-sizing: border-box;
-		text-align: center;
-		width: 100%;
+	&.has-button-width-full {
+		--genial-button-width-desktop: 100%;
+
+		.genial-blocks-advanced-button__link {
+			box-sizing: border-box;
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 1024px) {
+
+		.genial-blocks-advanced-button__link {
+			width: var(--genial-button-width-tablet, var(--genial-button-width-desktop, auto));
+		}
+	}
+
+	@media (max-width: 767px) {
+
+		.genial-blocks-advanced-button__link {
+			width: var(--genial-button-width-mobile, var(--genial-button-width-tablet, var(--genial-button-width-desktop, auto)));
+		}
 	}
 }

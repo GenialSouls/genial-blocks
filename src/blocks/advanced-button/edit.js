@@ -12,8 +12,20 @@ import {
 	TextControl,
 	ToggleControl,
 } from '@wordpress/components';
+import { getSafeRel } from '../../shared/link';
+import {
+	getResponsiveStyles,
+	setResponsiveValue,
+} from '../../shared/responsive';
+import { ResponsiveDeviceTabs } from '../../shared/responsive-controls';
 
 const borderStyles = [ 'none', 'solid', 'dashed', 'dotted' ];
+const responsiveDefinitions = {
+	width: {
+		name: 'width',
+		transform: ( value ) => ( value === 'full' ? '100%' : 'auto' ),
+	},
+};
 
 function getButtonStyle( attributes ) {
 	return {
@@ -68,16 +80,23 @@ export default function Edit( { attributes, setAttributes } ) {
 		paddingVertical,
 		paddingHorizontal,
 	} = attributes;
-	const rel = opensInNewTab ? 'noopener noreferrer' : undefined;
+	const rel = getSafeRel( opensInNewTab );
 	const blockProps = useBlockProps( {
 		className: `has-button-width-${ width || 'auto' }`,
+		style: getResponsiveStyles(
+			attributes.responsive,
+			responsiveDefinitions,
+			{
+				prefix: 'genial-button',
+			}
+		),
 	} );
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __( 'Link', 'genial-blocks' ) }
+					title={ __( 'Content & link', 'genial-blocks' ) }
 					initialOpen={ true }
 				>
 					<TextControl
@@ -120,9 +139,54 @@ export default function Edit( { attributes, setAttributes } ) {
 							setAttributes( { width: value } )
 						}
 					/>
+					<p>{ __( 'Responsive width', 'genial-blocks' ) }</p>
+					<ResponsiveDeviceTabs>
+						{ ( breakpoint ) => (
+							<SelectControl
+								label={ __(
+									'Width override',
+									'genial-blocks'
+								) }
+								value={
+									attributes.responsive?.[ breakpoint ]
+										?.width || ''
+								}
+								options={ [
+									{
+										label: __( 'Inherit', 'genial-blocks' ),
+										value: '',
+									},
+									{
+										label: __(
+											'Fit content',
+											'genial-blocks'
+										),
+										value: 'auto',
+									},
+									{
+										label: __(
+											'Full width',
+											'genial-blocks'
+										),
+										value: 'full',
+									},
+								] }
+								onChange={ ( value ) =>
+									setAttributes( {
+										responsive: setResponsiveValue(
+											attributes.responsive,
+											breakpoint,
+											'width',
+											value
+										),
+									} )
+								}
+							/>
+						) }
+					</ResponsiveDeviceTabs>
 				</PanelBody>
 				<PanelBody
-					title={ __( 'Button colors', 'genial-blocks' ) }
+					title={ __( 'Colors', 'genial-blocks' ) }
 					initialOpen={ false }
 				>
 					<p>{ __( 'Text color', 'genial-blocks' ) }</p>
@@ -161,7 +225,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 				</PanelBody>
 				<PanelBody
-					title={ __( 'Border and spacing', 'genial-blocks' ) }
+					title={ __( 'Border & spacing', 'genial-blocks' ) }
 					initialOpen={ false }
 				>
 					<p>{ __( 'Border color', 'genial-blocks' ) }</p>

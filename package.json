@@ -1,15 +1,19 @@
 {
   "name": "genial-blocks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Native Gutenberg blocks from GenialSouls.",
   "private": true,
   "license": "GPL-2.0-or-later",
   "scripts": {
-    "build": "wp-scripts build src/blocks/advanced-heading/index.js --output-path=build/blocks/advanced-heading && node scripts/flatten-block-metadata.js advanced-heading && wp-scripts build src/blocks/advanced-button/index.js --output-path=build/blocks/advanced-button && node scripts/flatten-block-metadata.js advanced-button",
+    "build": "wp-scripts build src/blocks/advanced-heading/index.js --output-path=build/blocks/advanced-heading && node scripts/flatten-block-metadata.js advanced-heading && wp-scripts build src/blocks/advanced-button/index.js --output-path=build/blocks/advanced-button && node scripts/flatten-block-metadata.js advanced-button && wp-scripts build src/blocks/info-box/index.js --output-path=build/blocks/info-box && node scripts/flatten-block-metadata.js info-box && wp-scripts build src/blocks/accordion/index.js src/blocks/accordion/view.js --output-path=build/blocks/accordion && node scripts/flatten-block-metadata.js accordion && wp-scripts build src/blocks/counter/index.js src/blocks/counter/view.js --output-path=build/blocks/counter && node scripts/flatten-block-metadata.js counter && wp-scripts build src/blocks/icon-list/index.js --output-path=build/blocks/icon-list && node scripts/flatten-block-metadata.js icon-list && wp-scripts build src/blocks/tabs/index.js src/blocks/tabs/view.js --output-path=build/blocks/tabs && node scripts/flatten-block-metadata.js tabs && wp-scripts build src/blocks/pricing-table/index.js --output-path=build/blocks/pricing-table && node scripts/flatten-block-metadata.js pricing-table && wp-scripts build src/blocks/progress-bar/index.js src/blocks/progress-bar/view.js --output-path=build/blocks/progress-bar && node scripts/flatten-block-metadata.js progress-bar && wp-scripts build src/blocks/container/index.js --output-path=build/blocks/container && node scripts/flatten-block-metadata.js container",
     "start": "wp-scripts start src/blocks/advanced-heading/index.js --output-path=build/blocks/advanced-heading",
     "lint:js": "wp-scripts lint-js src",
     "lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
-    "format:check": "wp-scripts format --check src"
+    "format:check": "wp-scripts format --check src",
+    "validate:ug08": "node scripts/validate-ug-08.js",
+    "validate:ug10": "node scripts/validate-ug-10.js",
+    "validate:ug11": "node scripts/validate-ug-11.js",
+    "validate:ug12": "node scripts/validate-ug-12.js"
   },
   "devDependencies": {
     "@wordpress/scripts": "27.9.0",

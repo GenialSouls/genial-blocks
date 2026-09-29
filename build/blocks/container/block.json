@@ -1,0 +1,44 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/container",
+	"version": "0.2.0",
+	"title": "Container",
+	"category": "genial-blocks",
+	"icon": "layout",
+	"description": "A semantic layout container for nested Gutenberg content.",
+	"keywords": [ "section", "container", "layout", "wrapper", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"responsive": {
+			"type": "object",
+			"default": {
+				"desktop": {
+					"maxWidth": "content",
+					"direction": "vertical",
+					"justify": "start",
+					"align": "stretch",
+					"gap": 24
+				},
+				"tablet": {},
+				"mobile": {}
+			}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"color": { "background": true, "text": true, "gradients": true },
+		"dimensions": { "minHeight": true },
+		"layout": { "allowSwitching": true, "allowEditing": true },
+		"spacing": { "margin": true, "padding": true, "blockGap": true },
+		"border": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.wp-block-genial-blocks-progress-bar {
+	--genial-progress-bar: currentcolor;
+	--genial-progress-track: #ddd;
+	--genial-progress-label: inherit;
+	--genial-progress-height: 12px;
+	--genial-progress-radius: 999px;
+	--genial-progress-spacing: 8px;
+	color: var(--genial-progress-label);
+}
+
+.genial-blocks-progress__header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: var(--genial-progress-spacing);
+}
+
+.genial-blocks-progress__track {
+	background: var(--genial-progress-track);
+	border-radius: var(--genial-progress-radius);
+	height: var(--genial-progress-height);
+	overflow: hidden;
+}
+
+.genial-blocks-progress__bar {
+	background: var(--genial-progress-bar);
+	border-radius: inherit;
+	display: block;
+	height: 100%;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Genial Blocks">
+	<description>Genial Blocks PHP quality rules.</description>
+	<file>genial-blocks.php</file>
+	<file>includes</file>
+	<file>uninstall.php</file>
+	<exclude-pattern>/vendor/</exclude-pattern>
+	<exclude-pattern>/build/</exclude-pattern>
+	<rule ref="WordPress" />
+	<rule ref="WordPress-Extra" />
+	<rule ref="WordPress-Docs" />
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<severity>0</severity>
+	</rule>
+	<arg name="basepath" value="." />
+	<arg name="colors" />
+	<arg name="parallel" value="4" />
+	<arg value="sp" />
+</ruleset>

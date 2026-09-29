@@ -1,0 +1,56 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/accordion",
+	"version": "0.2.0",
+	"title": "Accordion",
+	"category": "genial-blocks",
+	"icon": "menu",
+	"description": "An accessible multi-item accordion.",
+	"keywords": [ "accordion", "toggle", "faq", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": "item-1",
+					"title": "Accordion item",
+					"content": "Add content here."
+				}
+			]
+		},
+		"openItems": { "type": "array", "default": [ "item-1" ] },
+		"allowMultiple": { "type": "boolean", "default": false },
+		"titleTextColor": { "type": "string", "default": "" },
+		"contentTextColor": { "type": "string", "default": "" },
+		"backgroundColor": { "type": "string", "default": "" },
+		"openBackgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderStyle": {
+			"type": "string",
+			"enum": [ "none", "solid", "dashed", "dotted" ],
+			"default": "solid"
+		},
+		"borderWidth": { "type": "number", "default": 1 },
+		"borderRadius": { "type": "number", "default": 6 },
+		"itemSpacing": { "type": "number", "default": 8 },
+		"contentPadding": { "type": "number", "default": 16 },
+		"indicatorColor": { "type": "string", "default": "" }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}

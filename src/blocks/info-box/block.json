@@ -1,0 +1,85 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/info-box",
+	"version": "0.2.0",
+	"title": "Info Box",
+	"category": "genial-blocks",
+	"icon": "info-outline",
+	"description": "A focused information box with an optional curated icon and call to action.",
+	"keywords": [ "information", "notice", "call to action", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"icon": {
+			"type": "string",
+			"enum": [ "", "info", "check", "star", "lightbulb", "arrow-right" ],
+			"default": ""
+		},
+		"iconPosition": {
+			"type": "string",
+			"enum": [ "above", "beside" ],
+			"default": "above"
+		},
+		"responsive": {
+			"type": "object",
+			"default": { "desktop": {}, "tablet": {}, "mobile": {} }
+		},
+		"iconSize": { "type": "number", "default": 32 },
+		"iconColor": { "type": "string", "default": "" },
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-info-box__title",
+			"default": ""
+		},
+		"headingLevel": {
+			"type": "string",
+			"enum": [ "h2", "h3", "h4", "h5", "h6" ],
+			"default": "h3"
+		},
+		"description": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-info-box__description",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-info-box__cta",
+			"default": ""
+		},
+		"url": { "type": "string", "default": "#" },
+		"opensInNewTab": { "type": "boolean", "default": false },
+		"titleTextColor": { "type": "string", "default": "" },
+		"descriptionTextColor": { "type": "string", "default": "" },
+		"ctaTextColor": { "type": "string", "default": "" },
+		"backgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderStyle": {
+			"type": "string",
+			"enum": [ "none", "solid", "dashed", "dotted" ],
+			"default": "solid"
+		},
+		"borderWidth": { "type": "number", "default": 1 },
+		"borderRadius": { "type": "number", "default": 8 },
+		"padding": { "type": "number", "default": 24 },
+		"elementSpacing": { "type": "number", "default": 12 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
+		}
+	}
+}

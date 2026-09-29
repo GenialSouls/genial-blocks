@@ -1,0 +1,44 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/counter",
+	"version": "0.2.0",
+	"title": "Counter",
+	"category": "genial-blocks",
+	"icon": "chart-bar",
+	"description": "A numeric statistic with an optional progressive count-up animation.",
+	"keywords": [ "counter", "number", "statistic", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"startValue": { "type": "string", "default": "0" },
+		"endValue": { "type": "string", "default": "100" },
+		"prefix": { "type": "string", "default": "" },
+		"suffix": { "type": "string", "default": "" },
+		"label": { "type": "string", "default": "" },
+		"decimals": { "type": "number", "default": 0 },
+		"duration": { "type": "number", "default": 1200 },
+		"numberColor": { "type": "string", "default": "" },
+		"labelColor": { "type": "string", "default": "" },
+		"alignment": {
+			"type": "string",
+			"enum": [ "left", "center", "right" ],
+			"default": "center"
+		},
+		"spacing": { "type": "number", "default": 8 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}

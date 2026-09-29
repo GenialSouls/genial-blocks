@@ -1,0 +1,14 @@
+.wp-block-genial-blocks-icon-list {
+
+	.genial-blocks-icon-list__item-tools {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
+
+	.genial-blocks-icon-list__item-tools .components-base-control {
+		margin-bottom: 0;
+		min-width: 120px;
+	}
+}

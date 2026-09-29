@@ -1,0 +1,75 @@
+.wp-block-genial-blocks-info-box {
+	align-items: flex-start;
+	background-color: var(--genial-blocks-info-box-background-color, transparent);
+	border-color: var(--genial-blocks-info-box-border-color, currentColor);
+	border-radius: var(--genial-blocks-info-box-border-radius, 8px);
+	border-style: var(--genial-blocks-info-box-border-style, solid);
+	border-width: var(--genial-blocks-info-box-border-width, 1px);
+	display: flex;
+	gap: var(--genial-blocks-info-box-element-spacing, 12px);
+	padding: var(--genial-blocks-info-box-padding, 24px);
+	flex-direction: var(--genial-info-box-icon-direction-desktop, row);
+
+	.genial-blocks-info-box__icon {
+		color: var(--genial-blocks-info-box-icon-color, currentColor);
+		flex: 0 0 var(--genial-blocks-info-box-icon-size, 32px);
+		line-height: 0;
+	}
+
+	.genial-blocks-info-box__icon svg {
+		display: block;
+		height: var(--genial-blocks-info-box-icon-size, 32px);
+		width: var(--genial-blocks-info-box-icon-size, 32px);
+	}
+
+	.genial-blocks-info-box__content {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.genial-blocks-info-box__content > * {
+		margin-bottom: var(--genial-blocks-info-box-element-spacing, 12px);
+	}
+
+	.genial-blocks-info-box__content > :last-child {
+		margin-bottom: 0;
+	}
+
+	.genial-blocks-info-box__content h2,
+	.genial-blocks-info-box__content h3,
+	.genial-blocks-info-box__content h4,
+	.genial-blocks-info-box__content h5,
+	.genial-blocks-info-box__content h6 {
+		color: var(--genial-blocks-info-box-title-color, inherit);
+	}
+
+	.genial-blocks-info-box__description {
+		color: var(--genial-blocks-info-box-description-color, inherit);
+	}
+
+	.genial-blocks-info-box__cta {
+		color: var(--genial-blocks-info-box-cta-color, inherit);
+		font-weight: 600;
+	}
+
+	.genial-blocks-info-box__cta:hover {
+		text-decoration: underline;
+	}
+
+	.genial-blocks-info-box__cta:focus-visible {
+		outline: 2px solid currentcolor;
+		outline-offset: 3px;
+	}
+
+	&.has-icon-position-above {
+		--genial-info-box-icon-direction-desktop: column;
+	}
+
+	@media (max-width: 1024px) {
+		flex-direction: var(--genial-info-box-icon-direction-tablet, var(--genial-info-box-icon-direction-desktop, row));
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: var(--genial-info-box-icon-direction-mobile, var(--genial-info-box-icon-direction-tablet, var(--genial-info-box-icon-direction-desktop, row)));
+	}
+}

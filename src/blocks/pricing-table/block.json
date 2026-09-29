@@ -1,0 +1,61 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/pricing-table",
+	"version": "0.2.0",
+	"title": "Pricing Table",
+	"category": "genial-blocks",
+	"icon": "money-alt",
+	"description": "A clear pricing presentation without payment functionality.",
+	"keywords": [ "pricing", "plan", "price", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"planName": { "type": "string", "default": "Professional" },
+		"subtitle": { "type": "string", "default": "For growing teams" },
+		"price": { "type": "string", "default": "29" },
+		"currency": { "type": "string", "default": "$" },
+		"billingPeriod": { "type": "string", "default": "per month" },
+		"previousPrice": { "type": "string", "default": "" },
+		"features": {
+			"type": "array",
+			"default": [
+				{ "id": "feature-1", "text": "Unlimited projects" },
+				{ "id": "feature-2", "text": "Priority support" }
+			]
+		},
+		"ctaText": { "type": "string", "default": "Choose plan" },
+		"ctaUrl": { "type": "string", "default": "#" },
+		"opensInNewTab": { "type": "boolean", "default": false },
+		"badge": { "type": "string", "default": "" },
+		"alignment": {
+			"type": "string",
+			"enum": [ "left", "center", "right" ],
+			"default": "center"
+		},
+		"responsive": {
+			"type": "object",
+			"default": { "desktop": {}, "tablet": {}, "mobile": {} }
+		},
+		"textColor": { "type": "string", "default": "" },
+		"priceColor": { "type": "string", "default": "" },
+		"accentColor": { "type": "string", "default": "" },
+		"backgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderRadius": { "type": "number", "default": 8 },
+		"padding": { "type": "number", "default": 24 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}

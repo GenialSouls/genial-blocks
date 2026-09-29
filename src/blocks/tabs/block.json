@@ -1,0 +1,56 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/tabs",
+	"version": "0.2.0",
+	"title": "Tabs",
+	"category": "genial-blocks",
+	"icon": "index-card",
+	"description": "Accessible horizontal tabs for organized content.",
+	"keywords": [ "tabs", "content", "navigation", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": "tab-1",
+					"title": "Tab 1",
+					"content": "Add tab content here."
+				},
+				{
+					"id": "tab-2",
+					"title": "Tab 2",
+					"content": "Add tab content here."
+				}
+			]
+		},
+		"activeTab": { "type": "string", "default": "tab-1" },
+		"activeTextColor": { "type": "string", "default": "" },
+		"inactiveTextColor": { "type": "string", "default": "" },
+		"activeBackgroundColor": { "type": "string", "default": "" },
+		"inactiveBackgroundColor": { "type": "string", "default": "" },
+		"contentColor": { "type": "string", "default": "" },
+		"contentBackgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderRadius": { "type": "number", "default": 4 },
+		"tabSpacing": { "type": "number", "default": 4 },
+		"tabPadding": { "type": "number", "default": 12 },
+		"contentPadding": { "type": "number", "default": 20 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}

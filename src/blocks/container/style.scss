@@ -1,0 +1,35 @@
+.wp-block-genial-blocks-container {
+	--genial-container-content-width: var(--wp--style--global--content-size, 800px);
+	--genial-container-wide-width: var(--wp--style--global--wide-size, 1200px);
+	display: flex;
+	flex-direction: var(--genial-container-direction-desktop, column);
+	justify-content: var(--genial-container-justify-desktop, flex-start);
+	align-items: var(--genial-container-align-desktop, stretch);
+	gap: var(--genial-container-gap-desktop, 24px);
+	max-width: var(--genial-container-max-width-desktop, var(--genial-container-content-width));
+	margin-inline: auto;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+@media (max-width: 1024px) {
+
+	.wp-block-genial-blocks-container {
+		flex-direction: var(--genial-container-direction-tablet, var(--genial-container-direction-desktop, column));
+		justify-content: var(--genial-container-justify-tablet, var(--genial-container-justify-desktop, flex-start));
+		align-items: var(--genial-container-align-tablet, var(--genial-container-align-desktop, stretch));
+		gap: var(--genial-container-gap-tablet, var(--genial-container-gap-desktop, 24px));
+		max-width: var(--genial-container-max-width-tablet, var(--genial-container-max-width-desktop, var(--genial-container-content-width)));
+	}
+}
+
+@media (max-width: 767px) {
+
+	.wp-block-genial-blocks-container {
+		flex-direction: var(--genial-container-direction-mobile, var(--genial-container-direction-tablet, var(--genial-container-direction-desktop, column)));
+		justify-content: var(--genial-container-justify-mobile, var(--genial-container-justify-tablet, var(--genial-container-justify-desktop, flex-start)));
+		align-items: var(--genial-container-align-mobile, var(--genial-container-align-tablet, var(--genial-container-align-desktop, stretch)));
+		gap: var(--genial-container-gap-mobile, var(--genial-container-gap-tablet, var(--genial-container-gap-desktop, 24px)));
+		max-width: var(--genial-container-max-width-mobile, var(--genial-container-max-width-tablet, var(--genial-container-max-width-desktop, var(--genial-container-content-width))));
+	}
+}
