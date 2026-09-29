@@ -44,8 +44,12 @@ No. The plugin does not load remote runtime assets or external services.
 == Changelog ==
 
 = 0.2.0 =
-* Added six new native blocks, a dedicated inserter category, and distinct block icons.
+* Expanded Genial Blocks from two to ten native blocks with eight new blocks:
+  Info Box, Accordion, Counter, Icon List, Tabs, Pricing Table, Progress Bar,
+  and Container.
+* Added a unified Genial Blocks inserter category with distinct block icons.
+* Improved responsive layout behavior, including readable Container content on
+  narrow mobile screens.
 
 = 0.1.0 =
-* Initial foundation with six native blocks: Advanced Heading, Advanced Button,
-  Info Box, Accordion, Counter, and Icon List.
+* Initial foundation with Advanced Heading and Advanced Button blocks.
