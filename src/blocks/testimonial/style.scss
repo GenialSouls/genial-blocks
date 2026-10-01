@@ -1,6 +1,6 @@
 .wp-block-genial-blocks-testimonial {
-	background: var(--genial-testimonial-background, transparent);
-	border: 1px solid var(--genial-testimonial-border, transparent);
+	background: var(--genial-testimonial-background, #f8fafc);
+	border: 1px solid var(--genial-testimonial-border, #e2e8f0);
 	border-radius: var(--genial-testimonial-radius, 12px);
 	padding: var(--genial-testimonial-padding, 28px);
 	text-align: left;
@@ -37,14 +37,14 @@
 }
 
 .wp-block-genial-blocks-testimonial__quote {
-	color: var(--genial-testimonial-quote, inherit);
+	color: var(--genial-testimonial-quote, #172033);
 	font-size: 1.2em;
 	line-height: 1.55;
 	margin: 0;
 }
 
 .wp-block-genial-blocks-testimonial__rating {
-	color: var(--genial-testimonial-rating, #f59e0b);
+	color: var(--genial-testimonial-rating, #2563eb);
 	letter-spacing: 0.12em;
 	margin-bottom: 10px;
 }
@@ -56,7 +56,7 @@
 }
 
 .wp-block-genial-blocks-testimonial__name {
-	color: var(--genial-testimonial-name, inherit);
+	color: var(--genial-testimonial-name, #0f172a);
 }
 
 .wp-block-genial-blocks-testimonial__meta {

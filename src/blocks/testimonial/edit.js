@@ -213,6 +213,7 @@ export default function Edit( { attributes: a, setAttributes } ) {
 					<span className="genial-blocks-testimonial__meta">
 						<RichText
 							tagName="span"
+							className="genial-blocks-testimonial__role"
 							value={ a.role }
 							onChange={ ( value ) => set( { role: value } ) }
 							placeholder={ __(
@@ -223,6 +224,7 @@ export default function Edit( { attributes: a, setAttributes } ) {
 						{ a.company && <span aria-hidden="true"> · </span> }
 						<RichText
 							tagName="span"
+							className="genial-blocks-testimonial__company"
 							value={ a.company }
 							onChange={ ( value ) => set( { company: value } ) }
 							placeholder={ __( 'Company', 'genial-blocks' ) }

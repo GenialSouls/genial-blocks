@@ -60,13 +60,25 @@ export default function save( { attributes: a } ) {
 					value={ a.name }
 				/>
 				{ ( a.role || a.company ) && (
-					<RichText.Content
-						tagName="span"
-						className="genial-blocks-testimonial__meta"
-						value={ [ a.role, a.company ]
-							.filter( Boolean )
-							.join( ' · ' ) }
-					/>
+					<span className="genial-blocks-testimonial__meta">
+						{ a.role && (
+							<RichText.Content
+								tagName="span"
+								className="genial-blocks-testimonial__role"
+								value={ a.role }
+							/>
+						) }
+						{ a.role && a.company && (
+							<span aria-hidden="true"> · </span>
+						) }
+						{ a.company && (
+							<RichText.Content
+								tagName="span"
+								className="genial-blocks-testimonial__company"
+								value={ a.company }
+							/>
+						) }
+					</span>
 				) }
 			</figcaption>
 		</figure>

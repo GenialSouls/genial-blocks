@@ -1,6 +1,6 @@
 .wp-block-genial-blocks-team-member {
-	background: var(--genial-team-background, transparent);
-	border: 1px solid var(--genial-team-border, transparent);
+	background: var(--genial-team-background, #f8fafc);
+	border: 1px solid var(--genial-team-border, #e2e8f0);
 	border-radius: var(--genial-team-radius, 12px);
 	padding: var(--genial-team-padding, 24px);
 	text-align: center;
@@ -40,7 +40,7 @@
 }
 
 .wp-block-genial-blocks-team-member__name {
-	color: var(--genial-team-name, inherit);
+	color: var(--genial-team-name, #0f172a);
 	margin: 0 0 6px;
 }
 

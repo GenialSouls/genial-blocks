@@ -26,8 +26,8 @@
 }
 
 .genial-blocks-countdown__item {
-	background: var(--genial-countdown-item, transparent);
-	border: 1px solid var(--genial-countdown-border, transparent);
+	background: var(--genial-countdown-item, #eff6ff);
+	border: 1px solid var(--genial-countdown-border, #bfdbfe);
 	border-radius: var(--genial-countdown-radius, 8px);
 	box-sizing: border-box;
 	display: flex;
@@ -38,7 +38,7 @@
 }
 
 .genial-blocks-countdown__number {
-	color: var(--genial-countdown-number, inherit);
+	color: var(--genial-countdown-number, #172033);
 	font-size: clamp(1.75rem, 5vw, 3rem);
 	line-height: 1;
 }

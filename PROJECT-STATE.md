@@ -54,5 +54,24 @@
   13/13 registration, saved-content parsing, HTTP 200 rendering, and asset
   loading. Plugin Check reported no errors after removing the unused Domain
   Path header.
-- Browser/editor visual validation remains manual because browser automation
-  is not provisioned in this environment.
+
+## GB-0.3.0-02 QA and polish
+
+- Installed Chrome 154 through the existing native lab path with Playwright;
+  no browser provisioning or gateway restart was required.
+- Fresh Gutenberg-created Testimonial, Team Member, and Countdown content
+  reloaded without Invalid Block, recovery, console, or page errors.
+- The Testimonial save contract was corrected so role and company are emitted
+  as their declared scoped HTML selectors; this preserves those fields on
+  editor reload.
+- Default frontend fallback surfaces were improved without changing attribute
+  defaults: Testimonial and Team Member use restrained neutral surfaces, and
+  Countdown units use soft blue surfaces and borders.
+- Frontend QA passed at 1440, 1024, 768, 375, and 320px with no horizontal
+  overflow or console errors. Countdown instances decremented independently,
+  reached zero for expired targets, and displayed completion state.
+- Plugin Check passed with no errors after aligning the local development
+  readme Stable tag with the existing plugin header (`0.2.1`). This is local
+  development metadata; 0.3.0 release normalization remains deferred.
+- QA screenshots are stored outside the plugin tree under
+  `/home/openclaw/projects/genialsouls/qa/gb-0.3.0-02/`.
