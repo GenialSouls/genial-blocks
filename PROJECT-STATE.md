@@ -18,6 +18,37 @@
 - Container `content` width fallback remains `800px`; width/default UX is a
   separate follow-up and is intentionally unchanged.
 
+## GB-0.3.0-03 final release candidate
+
+- Release metadata is normalized to `0.3.0`; the unpublished `0.2.1` RC was
+  never published. Existing block schema metadata remains compatibility-safe.
+- `readme.txt` now describes all 13 Free blocks, includes the 0.3.0 changelog,
+  uses five directory-compatible tags, and has a compliant short description.
+- Exact RC: `/home/openclaw/projects/genialsouls/release-candidates/genial-blocks-0.3.0.zip`
+  — 104016 bytes, 127 files, SHA-256
+  `fd6a1d899c9f459d335c8ae9f2ea2b7626119e1f41e5cff1b871e1c07b9e47ea`.
+- Exact RC installation on WordPress 7.1.1 / PHP 8.3.6 passed activation,
+  13/13 registration, all-block HTTP rendering, asset loading, and Plugin
+  Check with zero errors and zero warnings.
+- The all-13-block fixture parsed and round-tripped exactly. The preserved
+  0.2.0 showcase fixture also round-tripped exactly with paired markers,
+  17 Advanced Heading instances, and 2 Container instances.
+- Exact-RC responsive smoke passed at 1440, 768, 375, and 320px with no
+  overflow. Countdown future instances decremented independently; expired
+  instances clamped to zero and displayed completion state without browser
+  exceptions.
+- Prior Chrome-based frontend evidence remains under
+  `/home/openclaw/projects/genialsouls/qa/gb-0.3.0-02/`. Final authenticated
+  editor MediaUpload and keyboard-only checks remain owner/manual gates because
+  the disposable lab browser session expired during this phase; no claim of
+  those editor interactions is made here.
+- Read-only WordPress.org SVN inspection found trunk/readme.txt at revision
+  3722273 and tags/0.2.0/readme.txt both still advertise Stable tag 0.2.0 and
+  the older 10-block-era description. Publication must update the intended
+  trunk/tag paths deliberately; no SVN mutation was made.
+- Remaining publication steps: owner approval, then a separate authorized
+  WordPress.org SVN/GitHub publication phase and final public listing checks.
+
 ## GB-0.2.1-02 findings
 
 - UG-12's former inline source-disclosure expectation was stale; the validator

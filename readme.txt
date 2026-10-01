@@ -1,14 +1,14 @@
 === Genial Blocks ===
 Contributors: genialsouls
-Tags: blocks, button, heading, accordion, list
+Tags: blocks, button, heading, testimonial, countdown
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.2.1
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Native WordPress blocks for structured content, interactive sections, pricing presentations, and responsive layouts.
+Native WordPress blocks for structured content, interactive sections, testimonials, team profiles, and responsive layouts.
 
 == Description ==
 
@@ -22,7 +22,7 @@ Genial Blocks is designed for creating useful page sections directly in the Word
 
 Interactive blocks use semantic controls and keyboard-aware behavior where applicable. Links opened in new tabs receive safe relationship attributes, and animated Counter and Progress Bar effects respect reduced-motion preferences.
 
-== 10 Blocks Included ==
+== 13 Blocks Included ==
 
 = Advanced Heading =
 
@@ -64,6 +64,18 @@ Show completion or progress values with configurable minimum and maximum values,
 
 Arrange nested Gutenberg content inside a responsive layout container with configurable width, direction, alignment, justification, gap, spacing, colors, borders, and minimum height.
 
+= Testimonial =
+
+Present a semantic testimonial with quote text, author details, an optional avatar, rating, alignment, colors, borders, radius, and spacing controls.
+
+= Team Member =
+
+Create an individual team profile with an image, name, designation, biography, safe social links, alignment, colors, borders, radius, and spacing controls.
+
+= Countdown =
+
+Display a client-side countdown to a deterministic UTC date and time with days, hours, minutes, seconds, a completion message, responsive layout, and styling controls.
+
 == Designed for the Native Editor ==
 
 Genial Blocks uses the native WordPress block editor and does not require another page builder. Its curated icon set is bundled with the plugin, and the plugin does not require a remote runtime asset service.
@@ -92,7 +104,7 @@ No. Genial Blocks is built for the native WordPress block editor.
 
 = Which blocks are included? =
 
-Genial Blocks includes Advanced Heading, Advanced Button, Info Box, Accordion, Counter, Icon List, Tabs, Pricing Table, Progress Bar, and Container.
+Genial Blocks includes Advanced Heading, Advanced Button, Info Box, Accordion, Counter, Icon List, Tabs, Pricing Table, Progress Bar, Container, Testimonial, Team Member, and Countdown.
 
 = Does the Pricing Table process payments? =
 
@@ -121,6 +133,12 @@ https://github.com/GenialSouls/genial-blocks
 Human-readable block source is in `src/`, compiled runtime assets are in `build/`, and the repository contains the build configuration and dependency lockfile used by contributors.
 
 == Changelog ==
+
+= 0.3.0 =
+* Added Testimonial, Team Member, and Countdown blocks.
+* Fixed Advanced Heading theme compatibility so configured typography and colors apply to the semantic heading element.
+* Fixed responsive Container direction handling.
+* Improved frontend compatibility, validation, and accessible presentation for native block content.
 
 = 0.2.0 =
 * Expanded Genial Blocks from two to ten native blocks with eight new blocks: Info Box, Accordion, Counter, Icon List, Tabs, Pricing Table, Progress Bar, and Container.

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Genial Blocks
  * Description: Native, accessible WordPress block editor blocks from GenialSouls.
- * Version: 0.2.1
+ * Version: 0.3.0
  * Author: GenialSouls
  * Author URI: https://genialsouls.com/
  * License: GPL-2.0-or-later
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GENIAL_BLOCKS_VERSION', '0.2.1' );
+define( 'GENIAL_BLOCKS_VERSION', '0.3.0' );
 define( 'GENIAL_BLOCKS_FILE', __FILE__ );
 define( 'GENIAL_BLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GENIAL_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
