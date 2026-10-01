@@ -22,6 +22,10 @@ const plugin = read( 'includes/class-genial-blocks.php' );
 assert( plugin.includes( "'block_categories_all'" ) && plugin.includes( "'genial-blocks'" ), 'category registration' );
 assert( plugin.includes( "__( 'Genial Blocks', 'genial-blocks' )" ), 'category title' );
 const readme = read( 'readme.txt' );
-assert( readme.includes( 'Source code: https://github.com/GenialSouls/genial-blocks' ), 'source disclosure' );
+assert(
+	readme.includes( '== Source Code and Development ==' ) &&
+		readme.includes( 'https://github.com/GenialSouls/genial-blocks' ),
+	'source disclosure'
+);
 assert( ! /Node\.js|npm|Composer|npm run build|npm ci/i.test( readme ), 'developer build instructions in readme' );
 console.log( 'UG-12 validation passed: 10/10 blocks, category, icons, keywords, and readme contract.' );
