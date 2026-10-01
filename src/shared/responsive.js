@@ -27,6 +27,10 @@ export function getResponsiveStyles(
 	return styles;
 }
 
+export function directionToCssValue( value ) {
+	return value === 'horizontal' ? 'row' : 'column';
+}
+
 export function setResponsiveValue( values = {}, breakpoint, key, value ) {
 	const next = {
 		desktop: { ...( values.desktop || {} ) },

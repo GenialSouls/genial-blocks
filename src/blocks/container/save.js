@@ -1,5 +1,6 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 import {
+	directionToCssValue,
 	getDefaultResponsiveValues,
 	getResponsiveStyles,
 } from '../../shared/responsive';
@@ -17,7 +18,10 @@ const definitions = {
 			return 'var(--genial-container-content-width)';
 		},
 	},
-	direction: 'direction',
+	direction: {
+		name: 'direction',
+		transform: directionToCssValue,
+	},
 	justify: 'justify',
 	align: 'align',
 	gap: 'gap',

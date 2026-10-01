@@ -13,7 +13,8 @@
     "validate:ug08": "node scripts/validate-ug-08.js",
     "validate:ug10": "node scripts/validate-ug-10.js",
     "validate:ug11": "node scripts/validate-ug-11.js",
-    "validate:ug12": "node scripts/validate-ug-12.js"
+    "validate:ug12": "node scripts/validate-ug-12.js",
+    "validate:frontend": "node scripts/validate-frontend-contracts.js"
   },
   "devDependencies": {
     "@wordpress/scripts": "27.9.0",

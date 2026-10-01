@@ -1,6 +1,28 @@
 .wp-block-genial-blocks-advanced-heading {
 
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		letter-spacing: inherit;
+		line-height: inherit;
+		text-align: inherit;
+		text-decoration: inherit;
+		text-transform: inherit;
+	}
+
 	.genial-blocks-advanced-heading__subtitle {
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		text-align: inherit;
 		min-height: 1.5em;
 	}
 }

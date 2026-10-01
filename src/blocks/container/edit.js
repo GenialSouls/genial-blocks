@@ -11,6 +11,7 @@ import {
 	TabPanel,
 } from '@wordpress/components';
 import {
+	directionToCssValue,
 	getDefaultResponsiveValues,
 	getResponsiveStyles,
 	setResponsiveValue,
@@ -29,7 +30,10 @@ const definitions = {
 			return 'var(--genial-container-content-width)';
 		},
 	},
-	direction: 'direction',
+	direction: {
+		name: 'direction',
+		transform: directionToCssValue,
+	},
 	justify: 'justify',
 	align: 'align',
 	gap: 'gap',
