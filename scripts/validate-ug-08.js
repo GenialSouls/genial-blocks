@@ -12,6 +12,10 @@ const expected = [
 	'tabs',
 	'pricing-table',
 	'progress-bar',
+	'container',
+	'testimonial',
+	'team-member',
+	'countdown',
 ];
 
 function read( relative ) {
@@ -76,6 +80,44 @@ assert(
 );
 assert( progress.includes( 'width:' ), 'Progress no-JS final width' );
 
+const testimonial = read( 'src/blocks/testimonial/save.js' );
+assert(
+	testimonial.includes( '<blockquote>' ) &&
+		testimonial.includes( 'avatarAlt' ),
+	'Testimonial semantics and image alt'
+);
+assert(
+	testimonial.includes( 'role="img"' ) &&
+		testimonial.includes( 'aria-hidden="true"' ),
+	'Testimonial rating accessibility'
+);
+
+const team = read( 'src/blocks/team-member/save.js' );
+assert(
+	team.includes( 'aria-label={ link.label }' ) &&
+		team.includes( 'noopener noreferrer' ),
+	'Team social link accessibility'
+);
+assert( team.includes( 'safeUrl' ), 'Team URL filtering' );
+
+const countdown =
+	read( 'src/blocks/countdown/save.js' ) +
+	read( 'src/blocks/countdown/view.js' );
+assert(
+	countdown.includes( 'data-target-date' ) &&
+		countdown.includes( 'Date.parse' ),
+	'Countdown deterministic target'
+);
+assert(
+	countdown.includes( 'setInterval' ) &&
+		countdown.includes( 'clearInterval' ),
+	'Countdown timer cleanup'
+);
+assert(
+	countdown.includes( 'Math.max( 0' ),
+	'Countdown non-negative completion'
+);
+
 console.log(
-	`UG-08 validation passed: ${ expected.length }/9 block contracts and feature fixtures.`
+	`UG-08 validation passed: ${ expected.length }/13 block contracts and feature fixtures.`
 );

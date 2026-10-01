@@ -4,7 +4,7 @@ Tags: blocks, button, heading, accordion, list
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.2.1
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,10 +121,6 @@ https://github.com/GenialSouls/genial-blocks
 Human-readable block source is in `src/`, compiled runtime assets are in `build/`, and the repository contains the build configuration and dependency lockfile used by contributors.
 
 == Changelog ==
-
-= 0.2.1 =
-* Fixed responsive Container direction handling across desktop, tablet, and mobile layouts.
-* Improved Advanced Heading styling compatibility with themes that define heading typography and colors.
 
 = 0.2.0 =
 * Expanded Genial Blocks from two to ten native blocks with eight new blocks: Info Box, Accordion, Counter, Icon List, Tabs, Pricing Table, Progress Bar, and Container.

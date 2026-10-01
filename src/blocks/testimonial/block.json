@@ -1,0 +1,76 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/testimonial",
+	"version": "0.3.0",
+	"title": "Testimonial",
+	"category": "genial-blocks",
+	"icon": "format-quote",
+	"description": "A semantic testimonial with author details and optional rating.",
+	"keywords": [ "testimonial", "quote", "review", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"quote": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-testimonial__quote",
+			"default": "A thoughtful testimonial belongs here."
+		},
+		"name": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-testimonial__name",
+			"default": "Alex Morgan"
+		},
+		"role": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-testimonial__role",
+			"default": "Creative Director"
+		},
+		"company": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-testimonial__company",
+			"default": "Northstar Studio"
+		},
+		"avatarUrl": { "type": "string", "default": "" },
+		"avatarId": { "type": "number", "default": 0 },
+		"avatarAlt": { "type": "string", "default": "" },
+		"showRating": { "type": "boolean", "default": false },
+		"rating": { "type": "number", "default": 5 },
+		"alignment": {
+			"type": "string",
+			"enum": [ "left", "center", "right" ],
+			"default": "left"
+		},
+		"avatarShape": {
+			"type": "string",
+			"enum": [ "circle", "rounded", "square" ],
+			"default": "circle"
+		},
+		"avatarSize": { "type": "number", "default": 64 },
+		"quoteColor": { "type": "string", "default": "" },
+		"nameColor": { "type": "string", "default": "" },
+		"metaColor": { "type": "string", "default": "" },
+		"ratingColor": { "type": "string", "default": "" },
+		"backgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderRadius": { "type": "number", "default": 12 },
+		"padding": { "type": "number", "default": 28 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}

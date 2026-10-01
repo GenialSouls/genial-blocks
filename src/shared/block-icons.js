@@ -43,4 +43,11 @@ export const blockIcons = {
 	] ),
 	progressBar: icon( [ 'M4 7h16v10H4V7Zm2 2v6h12V9H6Zm0 0v6h7V9H6Z' ] ),
 	container: icon( [ 'M3 4h18v16H3V4Zm2 2v12h14V6H5Zm3 3h8v6H8V9Z' ] ),
+	testimonial: icon( [ 'M5 5h14v10H9l-4 4V5Zm3 4h8v2H8V9Z' ] ),
+	teamMember: icon( [
+		'M12 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm-6 15a6 6 0 0 1 12 0H6Z',
+	] ),
+	countdown: icon( [
+		'M7 3v3m10-3v3M5 9h14M5 5h14v15H5V5Zm4 8h2v2H9v-2Zm4 0h2v2h-2v-2Z',
+	] ),
 };

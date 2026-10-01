@@ -1,0 +1,69 @@
+{
+	"apiVersion": 3,
+	"name": "genial-blocks/team-member",
+	"version": "0.3.0",
+	"title": "Team Member",
+	"category": "genial-blocks",
+	"icon": "businessperson",
+	"description": "A focused team member profile with biography and social links.",
+	"keywords": [ "team", "person", "profile", "Genial" ],
+	"textdomain": "genial-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"imageUrl": { "type": "string", "default": "" },
+		"imageId": { "type": "number", "default": 0 },
+		"imageAlt": { "type": "string", "default": "" },
+		"name": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-team-member__name",
+			"default": "Jordan Lee"
+		},
+		"designation": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-team-member__designation",
+			"default": "Product Designer"
+		},
+		"bio": {
+			"type": "string",
+			"source": "html",
+			"selector": ".genial-blocks-team-member__bio",
+			"default": "A short introduction to this team member."
+		},
+		"socialLinks": { "type": "array", "default": [] },
+		"imageShape": {
+			"type": "string",
+			"enum": [ "circle", "rounded", "square" ],
+			"default": "circle"
+		},
+		"imageSize": { "type": "number", "default": 128 },
+		"alignment": {
+			"type": "string",
+			"enum": [ "left", "center", "right" ],
+			"default": "center"
+		},
+		"nameColor": { "type": "string", "default": "" },
+		"designationColor": { "type": "string", "default": "" },
+		"bioColor": { "type": "string", "default": "" },
+		"socialColor": { "type": "string", "default": "" },
+		"backgroundColor": { "type": "string", "default": "" },
+		"borderColor": { "type": "string", "default": "" },
+		"borderRadius": { "type": "number", "default": 12 },
+		"padding": { "type": "number", "default": 24 }
+	},
+	"supports": {
+		"align": [ "left", "center", "right", "wide", "full" ],
+		"anchor": true,
+		"spacing": { "margin": true, "padding": true },
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true
+		}
+	}
+}
